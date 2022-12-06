@@ -1,0 +1,106 @@
+php
+include('includes/connection.php');
+include('includes/path.php');
+
+  if(isset($_POST['submit2']))
+  {
+    $email=$_SESSION['user_login'];
+$name=$_POST['customer_name'];
+$phonenumber=$_POST['customer_phonenumber'];
+$email=$_POST['customer_email'];
+$indentification=$_POST['customer_indentificationnumber'];
+$date=$_POST['date_of_repair'];
+$type=$_POST['vehicle_type'];
+$status = 0;
+
+
+
+
+$query = "INSERT INTO customer(email,customer_name, customer_phonenumber, customer_email, customer_indentificationnumber, date_of_repair, vehicle_type , status,status2)
+      VALUES ('$email', '$name', '$phonenumber', '$email', '$indentification','$type', '$status','$status2')";
+      echo '<script>alert("Customer Booked Successfuly")</script>';
+      echo "<script>window.location.href ='vehicle.php'</script>";
+      
+          $db->exec($query);
+      
+      
+        }
+      
+        ?>
+      
+      <!DOCTYPE html>
+      <html>
+      <head>
+       <title>Auto Xpress Garage </title>
+        <link rel="shortcut icon" type="image/jpg" href="assets/images/logo.png">
+         <link href="assets/css/style.css" rel="stylesheet">
+      
+          <link href="assets/fonts/css/all.css" rel="stylesheet">
+      </head>
+      <body>
+      <?php include('includes/header.php');?>
+
+<?php include('includes/signin.php');?>
+
+<?php include('includes/signup.php');?>
+
+<div class="banner-pages">
+  <img src="assets/images/k.jpg">
+  <h2>FILL IN CUSTOMERS DETAILS</h2>
+</div>
+<br /><br /><br /><br />
+	<div class = "details-head">
+  <h1>customers details<h1>
+		<br />
+	<h3>Dear beloved customer make sure that you fill in your  personal details corrently.</h3>
+</div>
+<br />
+<br />
+<div class="form-customers details">
+	<form  method="POST" class="form" >
+  <input style="visibility: hidden;" type="text" name="username" value="<?php echo $row['username']?> ">
+	<div class="first-group">
+
+		<div class="form-group">
+    <label>CUSTOMER NAME</label>
+    <input type="text" name="customer_name" required="true">
+		</div>
+
+    <!-- <div class="form-group">
+			<label>CUSTOMER PHONENUMBER</label>
+			<input type="text" name="customer_phonenumber" required="true">
+		</div> -->
+
+    <div class="form-group">
+			<label>CUSTOMER EMAIL</label>
+			<input type="text" name="customer_email" required="true">
+		</div> -->
+
+    <div class="form-group">
+			<label>CUSTOMER INDENTIFICATIONNUMBER</label>
+			<input type="text" name="customer_indentificationnumber" required="true">
+		</div> -->
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    <div class="form-group">
+    <label>CAR TYPE</label>
+    <select name="car_type" required="true">
+      <option>-----------select----------</option>
+      <option value="Toyota">Toyota</option>
+      <option value="Audi">Audi</option>
+      <option value="Mitsubishi">mitsubishi</option>
+      <option value="Isuzu">Isuzu</option>
+      <option value="Mazda">Mazda</option>
+      <option value="Subaru">Subaru</option>
+      <option value="Honda">Honda</option>
+      <option value="Ford">ford</option>
+      <option value="BMW">BMW</option>
+      <option value="Land Rover">Land Rover</option>
+  </select>
+  </div>

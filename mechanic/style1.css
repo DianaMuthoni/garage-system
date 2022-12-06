@@ -1,0 +1,87 @@
+body{
+	font-family: 'Roboto', sans-serif;
+    background: rgb(255,255,255);
+    background-position: center;
+}
+*{
+
+  margin-left:0;
+	padding: 0;
+}
+.sidebar-links .confirm{
+  background-color: green;
+  height: 20px;
+  width: 70px;
+  border-radius: 5px;
+  font-weight: 800;
+}
+.sidebar-links .cancle{
+  background-color: red;
+  height: 20px;
+  width: 70px;
+  border-radius: 5px;
+  font-weight: 800;
+}
+#customers a{
+	color: white;
+	text-decoration: none;
+}
+.sidebar-links .profile{
+
+  padding-bottom: 40px;
+}
+
+.sidebar-links .form5{
+  width: 60%;
+  height:700px;
+  border-radius:8px;
+  padding:20px 20px;
+  box-sizing:border-box;
+  margin-left: 180px;
+
+}
+.sidebar-links .form5 input,select,option{
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  transition:all .3s;
+  border-bottom:2px solid black;
+  border-radius: 5px;
+}
+.sidebar-links .form5 label{
+  margin-right: 950px;
+  font-size:14px;
+  font-weight: 900;
+  display: flex;
+
+
+}
+
+.sidebar-links .form5 button{
+  padding:8px 12px;
+  margin-top: 25px;
+  background: rgb(167,94,221,1);
+  border:2px solid rgb(167,94,221,1);;
+  width: 100px;
+  cursor:pointer;
+  transition:all .3s;
+  border-radius: 5px;
+}
+.sidebar-links .form5 button:hover{
+  background:rgb(128,255,128,1);
+  color:#fff;
+}
+
+.search-input{
+  float: right;
+  padding: 20px;
+}
+.search-input input{
+  padding: 5px;
+  border-radius: 5px;
+}
+.search-input label{
+font-size: 15px;
+font-weight: 900;
+  
+}
