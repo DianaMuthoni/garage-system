@@ -119,33 +119,33 @@ input.btn-purple {
                                 <h5 class=""> Send message to these clients</h4>
 <?php
 //CODE TO FETCH CLIENTS
-$servername = "localhost:3308";
-$username = "root";
-$password = "";
-$dbname = "prestige";
+// $servername = "localhost:3308";
+// $username = "root";
+// $password = "";
+// $dbname = "prestige";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+// $conn = new mysqli($servername, $username, $password, $dbname);
+// // Check connection
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
 
-$sql = "SELECT client_id, firstName, lastName,phone_number FROM client";
-$result = $conn->query($sql);
+// $sql = "SELECT client_id, firstName, lastName,phone_number FROM client";
+// $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-  echo "<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Phone Number</th></tr>";
+// if ($result->num_rows > 0) {
+//   echo "<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Phone Number</th></tr>";
   
   // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "<tr><td>".$row["client_id"]."</td><td>".$row["firstName"]." </td><td>".$row["lastName"]."</td><td> ".$row["phone_number"]."</td></tr>";
-  }
-  echo "</table>";
-} else {
-  echo "0 results";
-}
-$conn->close();
+//   while($row = $result->fetch_assoc()) {
+//     echo "<tr><td>".$row["client_id"]."</td><td>".$row["firstName"]." </td><td>".$row["lastName"]."</td><td> ".$row["phone_number"]."</td></tr>";
+//   }
+//   echo "</table>";
+// } else {
+//   echo "0 results";
+// }
+// $conn->close();
 
 
 
